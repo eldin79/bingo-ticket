@@ -15,6 +15,13 @@ function createTickets(ticketString) {
 		start = end;
 		end += digitsPerTicket;
 	}
+	for (var i = 0; i < tickets.length; ++i) {
+		var arr = [];
+		index = 0;
+		for (var j = 0; j < tickets[i].length; j += 2)
+			arr[index++] = tickets[i].substring(j, j + 2);
+		tickets[i] = arr;
+	}
 	return tickets;
 }
 
