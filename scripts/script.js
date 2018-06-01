@@ -29,7 +29,12 @@ function drawTickets(tickets) {
 	for (var i = 0; i < tickets.length; ++i) {
 		console.log("Ticket[" + i + "]: " + tickets[i]);
 		var ticket = tickets[i];
-		document.write("Ticket " + (i + 1) + ": " + ticket + "<br>");
+		var ticketInfo = "Ticket " + (i + 1) + ": " + ticket;
+		
+		var img    = document.createElement("img");
+		img.src    = "images/ticket.png";
+		img.alt	   = ticketInfo;
+		
 		for (var j = 0; j < ticket.length; ++j) {
 			var numValue = Number(ticket[j]);
 			var indexValue = numValue - 1;
@@ -39,6 +44,9 @@ function drawTickets(tickets) {
 						"colIndex: " + colIndex + "  " +
 						"rowIndex: " + rowIndex);
 		}
+		
+		document.getElementById("ticketDiv").appendChild(img);
+		document.getElementById("ticketDiv").appendChild(document.createElement("br"));
 	}
 }
 
