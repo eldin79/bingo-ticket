@@ -2,16 +2,35 @@
 <html>
   <head>
 	<meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
 	<title>Bingo Ticket</title>
   </head>
-  <body>
+  <body onload="getTickets()">
+	<h1>Bingo Ticket</h1>
+	
+	<h2>Bingo - Win Top Prizes!!!</h2>
+	<p>This website will display a set of bingo tickets.</p>
+	<ul>
+		<li>Win Cash Prizes!</li>
+		<li>Loads of Fun!</li>
+		<li>Let's Play!</li>
+	</ul>
+	
 	<div id="ticketDiv"></div>
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	
+	<p>Want to learn more about bingo? 
+		<a href="https://en.wikipedia.org/wiki/Bingo_(United_Kingdom)">
+			Click here!
+		</a>
+	</p>
+	
 	<script src="scripts/script.js"></script>
 	<script type="text/javascript">
-		var ticketString = "011722475204365360702637497481233455758302154058881928446789061241507324334876840738576186051132437816395663800818206590104559628214294664710935667287132130687703253151692742547985";
-		var tickets = createTickets(ticketString);
-		drawTickets(tickets);
+		function getTickets() {
+			var ticketString = "011722475204365360702637497481233455758302154058881928446789061241507324334876840738576186051132437816395663800818206590104559628214294664710935667287132130687703253151692742547985";
+			var tickets = createTickets(ticketString);
+			drawTickets(tickets);
+		}
 	</script>
   </body>
 </html>
