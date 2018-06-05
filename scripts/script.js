@@ -29,10 +29,11 @@ function createTickets(ticketString) {
 
 function drawTickets(tickets) {
 	// set canvas and context properties
-	var canvas 		= document.getElementById("canvas");
-	canvas.width 	= 700;
-	canvas.height 	= tickets.length * 150;
-	var ctx 		= canvas.getContext("2d");
+	var canvas 			= document.getElementById("canvas");
+	var imgHeight 		= 73;
+	var ticketYOffset 	= 26;
+	canvas.height 		= tickets.length * (imgHeight + ticketYOffset);
+	var ctx 			= canvas.getContext("2d");
 	
 	for (var i = 0; i < tickets.length; ++i) {
 		var ticket 		 = tickets[i];
@@ -114,11 +115,11 @@ function drawTickets(tickets) {
 					textX++;
 
 				// draw ticket image
-				var imgWidth = 257;
-				var imgHeight = 73;
-				var finalWidth = 350;
-				var imgX = canvas.width / 2;
-				var ticketYOffset = 26;
+				var imgWidth 		= 257;
+				var imgHeight 		= 73;
+				var finalWidth 		= 350;
+				var imgX 			= 0;
+				var ticketYOffset 	= 26;
 				var imgY = ticketsDrawn * (imgHeight + ticketYOffset);
 				if (j == 0)
 					ctx.drawImage(img, imgX, imgY, finalWidth, (finalWidth/imgWidth) * imgHeight);

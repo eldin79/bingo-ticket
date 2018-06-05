@@ -2,7 +2,8 @@
 html {
 	font-family: 'Roboto', sans-serif;
 	background-color: #FF0F0F;
-	color: yellow;
+	color: #FFFC0F;
+	background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23FFFC0F' fill-opacity='0.41' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 h1 {
@@ -13,12 +14,51 @@ h1 {
 	text-shadow: 3px 3px 1px black;
 }
 
+h2 {
+	text-shadow: 3px 3px 1px black;
+}
+
 p, li {
 	font-size: 16px;
 	line-height: 1.5;
+	text-shadow: 3px 3px 1px black;
+}
+
+a:link {
+	color: #FFFC0F;
+	font-weight: bold;
+	text-shadow: 3px 3px 1px black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: silver;
+	font-weight: bold;
+	text-shadow: 3px 3px 1px black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+	font-weight: bold;
 }
 
 img {
 	display: block;
 	margin: 0 auto;
+}
+
+ticketDiv {
+	width: 100%;
+	text-align: center;
+}
+
+canvas {
+	display: block;
+	margin: 0 auto;
+	border: 5px solid #FFFC0F;
+}
+
+infoDiv {
+	margin: 20 auto;
 }
